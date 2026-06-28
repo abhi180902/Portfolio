@@ -694,63 +694,74 @@ F<!doctype html>
       }
 
       /* Contact */
+      /* Contact */
       .contact-inner {
-        max-width: 760px;
+        max-width: 900px;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
+        padding: 0 20px;
       }
+
       .contact-kicker {
-        font-size: 1.05rem;
-        color: rgba(24, 32, 50, 0.72);
+        font-size: 1.1rem;
+        color: #666;
         margin-bottom: 1rem;
       }
+
       .contact-title {
-        font-family: "DM Sans", sans-serif;
-        font-size: clamp(2.8rem, 5vw, 4rem);
+        font-size: clamp(2.8rem, 8vw, 5rem);
         font-weight: 800;
-        color: #050505;
-        line-height: 1.05;
-        margin-bottom: 3.25rem;
-        letter-spacing: 0;
+        margin-bottom: 3rem;
       }
+
       .contact-links {
-        display: inline-flex;
-        align-items: center;
+        width: 100%;
+        display: flex;
         justify-content: center;
-        gap: 2.25rem;
-        border: 2px solid rgba(5, 5, 5, 0.34);
-        border-radius: 36px;
-        padding: 1.35rem 2rem;
-        background: rgba(255, 255, 255, 0.42);
-      }
-      .contact-link {
-        display: inline-flex;
         align-items: center;
-        gap: 0.8rem;
-        color: #050505;
-        text-decoration: none;
-        font-size: clamp(1.05rem, 2.2vw, 1.45rem);
-        font-weight: 500;
-        transition:
-          color 0.2s,
-          transform 0.2s;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        padding: 2rem;
+        border: 2px solid rgba(0, 0, 0, 0.18);
+        border-radius: 32px;
+        background: #fff;
       }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        text-decoration: none;
+        color: #111;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        min-width: 0;
+        word-break: break-word;
+        transition: 0.3s;
+      }
+
       .contact-link:hover {
         color: #0f766e;
-        transform: translateY(-2px);
       }
+
       .contact-icon {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        display: inline-flex;
+        background: #000;
+        color: #fff;
+
+        display: flex;
         align-items: center;
         justify-content: center;
-        background: #050505;
-        color: #fff;
-        font-size: 1.25rem;
-        font-weight: 800;
+
         flex-shrink: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
       }
       /* Footer */
       footer {
@@ -819,6 +830,33 @@ F<!doctype html>
           width: 300px;
           height: 300px;
         }
+        .contact-links {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.5rem;
+          padding: 1.5rem;
+          border-radius: 24px;
+        }
+
+        .contact-link {
+          width: 100%;
+          font-size: 1rem;
+        }
+
+        .contact-link span:last-child {
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+
+        .contact-icon {
+          width: 52px;
+          height: 52px;
+          font-size: 1.4rem;
+        }
+
+        .contact-title {
+          font-size: 3rem;
+        }
       }
       @media (max-width: 480px) {
         .skills-grid {
@@ -830,18 +868,6 @@ F<!doctype html>
         .btn-primary,
         .btn-outline {
           text-align: center;
-        }
-        .contact-links {
-          width: 100%;
-          flex-direction: column;
-          gap: 1rem;
-          border-radius: 28px;
-          padding: 1.25rem;
-        }
-        .contact-link {
-          width: 100%;
-          justify-content: center;
-          font-size: 1rem;
         }
       }
     </style>
@@ -1052,7 +1078,7 @@ F<!doctype html>
     </section>
     <!-- FOOTER -->
     <footer>
-      <p>Designed &amp; built by <span>Abhishek S Sangamad</span> · 2024</p>
+      <p>Designed &amp; built by <span>Abhishek S Sangamad</span> © 2026</p>
     </footer>
 
     <div id="root"></div>
@@ -1123,12 +1149,6 @@ F<!doctype html>
           tech: ["Java", "Spring Boot", "Spring Data JPA", "MySQL", "Postman"],
           color: "#0f766e",
           desc: "Full Student Management system built with RESTful conventions, MySQL persistence, controller-service-repository layering, global exception handling, and endpoint validation through Postman.",
-        },
-        {
-          title: "React.js Movie Application",
-          tech: ["React.js", "Context API", "React Router", "HTML5", "CSS3"],
-          color: "#2563eb",
-          desc: "Responsive movie application with real-time API integration, reusable UI components, persistent user preferences, optimized routing, and authentication workflows for signup, login, and password reset.",
         },
         {
           title: "Portfolio Website",
